@@ -59,10 +59,10 @@ export default function Page() {
   ];
 
   const outcomes = [
-    "Reduce content production time",
-    "Scale onboarding without chaos",
-    "Create consistent multi-channel marketing",
-    "Improve search visibility and lead flow",
+    "Cut content production time from days to under an hour",
+  "Publish consistently across blog + LinkedIn without hiring writers",
+  "Track exactly which content drives engagement with a live dashboard",
+  "Onboard new clients without adding headcount",
   ];
 
   return (
@@ -70,12 +70,9 @@ export default function Page() {
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Image
-            src="/logo.png"
-            alt="Autopilot Marketing Logo"
-            width={160}
-            height={52}
-          />
+          <span className="text-xl font-bold text-cyan-400 tracking-tight">
+            Autopilot<span className="text-white">Marketing</span>
+          </span>
 
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/75">
             <a href="#services">Services</a>
@@ -96,13 +93,13 @@ export default function Page() {
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <h1 className="text-5xl font-bold">
-          Turn your agency into an{" "}
-          <span className="text-cyan-400">autopilot marketing machine</span>
+          Stop writing content manually.{" "}
+          <span className="text-cyan-400">Let AI do it for your agency.</span>
         </h1>
         <p className="mt-6 text-lg text-gray-300 max-w-2xl">
-          We build AI-powered marketing systems that manage client data,
-          generate blog and social content, and optimize for SEO so you can
-          focus on closing clients.
+          Hi, I'm Nikhil — a Data Scientist who builds AI systems that generate 
+          blogs, LinkedIn posts, and SEO content for marketing agencies on autopilot. 
+          Your team focuses on clients. The system handles the content.
         </p>
 
         <div className="mt-8 flex gap-4">
@@ -165,7 +162,28 @@ export default function Page() {
           ))}
         </ul>
       </section>
-
+      {/* Pricing */}
+      <section className="px-6 py-20 bg-neutral-900 text-center">
+        <h2 className="text-3xl font-bold mb-4">Simple, flat-rate pricing</h2>
+        <p className="text-gray-400 mb-10">No retainers. No surprises.</p>
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    {[
+      { tier: "Starter", price: "$500", desc: "4 blog posts + 8 LinkedIn posts/mo + basic dashboard" },
+      { tier: "Growth", price: "$1,200", desc: "12 blog posts + 24 LinkedIn posts/mo + SEO optimization + engagement dashboard" },
+      { tier: "Agency", price: "$2,500", desc: "Unlimited content for up to 5 clients + full workflow automation + reporting" },
+    ].map((p) => (
+      <div key={p.tier} className="border border-white/10 p-8 rounded-xl">
+        <div className="text-cyan-400 font-semibold text-sm uppercase tracking-widest">{p.tier}</div>
+        <div className="text-4xl font-bold mt-2">{p.price}<span className="text-gray-400 text-base">/mo</span></div>
+        <p className="mt-4 text-gray-400 text-sm">{p.desc}</p>
+        <a href="https://calendly.com/nxikhilm931" target="_blank" rel="noreferrer"
+          className="mt-6 block bg-cyan-400 text-black px-4 py-2 rounded-xl text-sm font-semibold">
+          Get Started
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
       {/* Contact */}
       <section id="contact" className="px-6 py-20 text-center">
         <h2 className="text-4xl font-bold">
