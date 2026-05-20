@@ -176,7 +176,7 @@ export default function Page() {
         <div className="text-cyan-400 font-semibold text-sm uppercase tracking-widest">{p.tier}</div>
         <div className="text-4xl font-bold mt-2">{p.price}<span className="text-gray-400 text-base">/mo</span></div>
         <p className="mt-4 text-gray-400 text-sm">{p.desc}</p>
-        <a href="https://calendly.com/nxikhilm931" target="_blank" rel="noreferrer"
+        <a href="https://calendly.com/nikhilm931" target="_blank" rel="noreferrer"
           className="mt-6 block bg-cyan-400 text-black px-4 py-2 rounded-xl text-sm font-semibold">
           Get Started
         </a>
